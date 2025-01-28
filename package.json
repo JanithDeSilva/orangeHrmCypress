@@ -1,0 +1,27 @@
+{
+  "name": "orangehrmcypersstest",
+  "version": "1.0.0",
+  "description": "cypressTest",
+  "homepage": "https://github.com/JanithDeSilva/orangeHrmCypress#readme",
+  "bugs": {
+    "url": "https://github.com/JanithDeSilva/orangeHrmCypress/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanithDeSilva/orangeHrmCypress.git"
+  },
+  "license": "ISC",
+  "author": "Janith",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cypress": "^14.0.0",
+    "xpath": "^0.0.34"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}
