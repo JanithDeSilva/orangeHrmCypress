@@ -9,6 +9,7 @@ export class adminPage {
     private select_dropDown = "(//div[contains(text(),'-- Select --')])[1]"
     private select_adminOption = ".oxd-select-dropdown .oxd-select-option"
     private btn_search = "//button[@type='submit']"
+    private txt_userRole = "//div[@class='oxd-table-card']//div[3]//div[1]"
 
 
 
@@ -35,6 +36,11 @@ export class adminPage {
 
     public step_clickSubmit(){
         cy.xpath(this.btn_search).click()
+        return this;
+    }
+    //exercise from 4th session
+    public step_verifyUserRole(){
+        cy.xpath(this.txt_userRole).should('have.text', 'Admin')
         return this;
     }
 }
