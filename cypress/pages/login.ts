@@ -1,3 +1,5 @@
+import { homeDashboard } from "../pages/homeDashboard"
+
 export class orangeLogin{
     
     private txt_username = "//input[@name='username']";
@@ -20,11 +22,22 @@ export class orangeLogin{
     }
     public step_clickLogin(){
         cy.xpath(this.btn_login).click()
-        return this;
+        cy.wait(5000)
+        return new homeDashboard();
     }
     public step_verifyDashboardHeaderText(text:string){
         cy.xpath(this.lbl_dashboard).should('have.text', text)
         return this;
     }
+
+    public step_Login(){
+        this.visitUrl()
+        .step_enterUsername("Admin")
+        .step_enterPassword("admin123")
+        .step_clickLogin()
+        return new homeDashboard();
+
+    }
+
 
 }
